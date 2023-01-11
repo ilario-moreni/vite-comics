@@ -85,7 +85,7 @@
     @use './styles/partials/mixin.scss';
 
     .main_container{
-        @include mixin.default;
+        @include mixin.container;
     }
 
     .section_ul{

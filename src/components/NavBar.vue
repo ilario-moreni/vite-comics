@@ -74,7 +74,7 @@
                 <img src="../assets/img/dc-logo.png"  class="DC_logo" alt="logo DC">
             </div>
             <ul class="section_ul">
-                <li v-for='section in sections'>
+                <li v-for='(section, index) in sections' :key="index">
                     <a class="section_a" :href="section.link">{{ section.label }}</a>
                 </li>
             </ul>

@@ -202,7 +202,11 @@ export default {
                 <img class="dc_logo_bg" src="/src/assets/img/dc-logo-bg.png" alt="">
             </div>
         </div>
-        <div class="main_container"></div>
+        <div class="socials_container">
+            <div class="main_container">
+
+            </div>
+        </div>
     </div>
 </template>
 
@@ -246,8 +250,9 @@ export default {
 
     .features_container{
         background-image: url(../assets/img/footer-bg.jpg);
-        background-size: contain;
         background-size: cover;
+        position: relative;
+        z-index: -2;
     }
 
     .features_lists_container{
@@ -278,7 +283,13 @@ export default {
         position: absolute;
         right: 5%;
         bottom: -20%;
-        z-index: 0;
+        z-index: -1;
     }
 
+    /* socials container */
+
+    .socials_container{
+        background-color: #303030;
+        min-height: 100px;
+    }
 </style>

@@ -19,13 +19,13 @@
         &:hover {
 
             border-bottom: 4px solid $lightblue;
-            position: relative;
-            top: 2px;
 
 
         }
 
         &:hover a {
+            position: relative;
+            top: calc(45% + 2px);
             color: $lightblue;
         }
     }

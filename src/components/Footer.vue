@@ -146,6 +146,7 @@ export default {
 
 <template lang="">
     <div>
+        <!-- top footer container -->
         <div class="top_footer_container">
             <div class="main_container">
                 <ul class="shop_ul">
@@ -156,6 +157,8 @@ export default {
                 </ul>
             </div>
         </div>
+
+        <!-- features container -->
         <div class="features_container">
             <div class="main_container features_lists_container">
                 <div>
@@ -164,7 +167,7 @@ export default {
                             <h3>DC COMICS</h3>
                         </li>
                         <li class="features_li" v-for="item in features.dc_Comics_list">
-                            {{ item.label }}
+                            <a :href="item.link"> {{ item.label }} </a>
                         </li>
                     </ul>
                     <ul class="features_ul">
@@ -172,7 +175,7 @@ export default {
                             <h3>SHOP</h3>
                         </li>
                         <li class="features_li" v-for="item in features.shop_list">
-                            {{ item.label }}
+                            <a :href="item.link"> {{ item.label }} </a>
                         </li>
                     </ul>
                 </div>
@@ -182,7 +185,7 @@ export default {
                             <h3>DC</h3>
                         </li>
                         <li class="features_li" v-for="item in features.dc_list">
-                            {{ item.label }}
+                            <a :href="item.link"> {{ item.label }} </a>
                         </li>
                     </ul>
                 </div>
@@ -192,10 +195,11 @@ export default {
                             <h3>SITES</h3>
                         </li>
                         <li class="features_li" v-for="item in features.sites_list">
-                            {{ item.label }}
+                            <a :href="item.link"> {{ item.label }} </a>
                         </li>
                     </ul>
                 </div>
+                <img class="dc_logo_bg" src="/src/assets/img/dc-logo-bg.png" alt="">
             </div>
         </div>
         <div class="main_container"></div>
@@ -204,8 +208,8 @@ export default {
 
 <style lang="scss">
 
-    @use './styles/partials/mixin.scss';
-    @use './styles/partials/variables.scss' as *;
+    @use '../styles/partials/mixin.scss';
+    @use '../styles/partials/variables.scss' as *;
 
     /* top footer container */
 
@@ -242,15 +246,15 @@ export default {
 
     .features_container{
         background-image: url(../assets/img/footer-bg.jpg);
+        background-size: contain;
         background-size: cover;
-        min-height: 200px;
-        max-height: 482px;
     }
 
     .features_lists_container{
         display: flex;
-        margin: 0 auto;
-        padding: 2rem 0;
+        position: relative;
+        padding: 1.5rem 0;
+        height: 100%;
         h3{
             color:white;
             margin: 1.5rem 0 1rem;
@@ -263,9 +267,18 @@ export default {
     }
 
     .features_li{
-        color: grey;
-        font-size: 14px;
+        font-size: 12px;
         line-height: 1.5rem;
+        a{
+            color: $grey;
+        }
+    }
+
+    .dc_logo_bg{
+        position: absolute;
+        right: 5%;
+        bottom: -20%;
+        z-index: 0;
     }
 
 </style>

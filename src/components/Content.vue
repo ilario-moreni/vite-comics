@@ -14,7 +14,7 @@ export default {
 </template>
 
 <style lang="scss">
-    @use './styles/partials/mixin.scss';
+    @use '../styles/partials/mixin.scss';
     .content_div{
         @include mixin.container;
         background-color: black;

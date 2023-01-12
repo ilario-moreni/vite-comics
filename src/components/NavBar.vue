@@ -82,7 +82,7 @@
     </div>
 </template>
 <style lang="scss">
-    @use './styles/partials/mixin.scss';
+    @use '../styles/partials/mixin.scss';
 
     .main_container{
         @include mixin.container;

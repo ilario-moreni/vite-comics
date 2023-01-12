@@ -1,7 +1,6 @@
 <script>
 import dcComicsList from '../data/dc-comics.js';
 import SerieCard from '../components/SerieCard.vue';
-import dcComics from '../data/dc-comics.js';
 export default {
     name: 'Content',
     components: {
@@ -87,6 +86,7 @@ export default {
     /* button */
 
     .load_more_button{
+        display: inline-block;
         position:relative;
         left: 50%;
         button{

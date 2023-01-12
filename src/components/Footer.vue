@@ -138,7 +138,29 @@ export default {
                         link: '#'
                     }
                 ]
-            }
+            },
+            socials: [
+                {
+                    src:'footer-facebook.png',
+                    link:'#',
+                },
+                {
+                    src:'footer-twitter.png',
+                    link:'#',
+                },
+                {
+                    src:'footer-youtube.png',
+                    link:'#',
+                },
+                {
+                    src:'footer-pinterest.png',
+                    link:'#',
+                },
+                {
+                    src:'footer-periscope.png',
+                    link:'#',
+                }
+            ]
         }
     }
 }
@@ -203,8 +225,18 @@ export default {
             </div>
         </div>
         <div class="socials_container">
-            <div class="main_container">
-
+            <div class="flex_container">
+                <div>
+                    <button class="sign_up_button">
+                        SIGN-UP NOW!
+                    </button>
+                </div>
+                <div class="right_socials_container">
+                    <div class="follow_us">FOLLOW US</div>
+                    <div>
+                        <img v-for="item in socials" class="social_icons" :src="`/src/assets/img/${item.src}`" alt="">
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -276,6 +308,7 @@ export default {
         line-height: 1.5rem;
         a{
             color: $grey;
+            z-index: 100;
         }
     }
 
@@ -290,6 +323,39 @@ export default {
 
     .socials_container{
         background-color: #303030;
-        min-height: 100px;
+        padding: 2.5rem 0;
     }
+
+    .flex_container{
+        @include mixin.flex_container;
+    }
+
+    .sign_up_button{
+        border: 2px solid $lightblue;
+        background-color: transparent;
+        color:white;
+        padding: 1rem;
+    }
+
+    .right_socials_container{
+        display: flex;
+        align-items: center;
+    }
+
+    .follow_us{
+        color: $lightblue;
+        cursor:pointer;
+    }
+
+    .social_icons{
+        margin-left: 1rem;
+        cursor:pointer;
+
+
+        &:hover{
+            filter: brightness(1.5);
+        }
+    }
+
+
 </style>

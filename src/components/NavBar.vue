@@ -11,7 +11,7 @@
 
                 {
                     label: 'COMICS',
-                    active: false,
+                    active: true,
                 },
 
                 {
@@ -74,7 +74,7 @@
                 <img src="../assets/img/dc-logo.png"  class="DC_logo" alt="logo DC">
             </div>
             <ul class="section_ul">
-                <li v-for='(section, index) in sections' :key="index">
+                <li v-for='(section, index) in sections' :key="index" :class="section.active ? 'active' : ''">
                     <a class="section_a" :href="section.link">{{ section.label }}</a>
                 </li>
             </ul>
@@ -101,5 +101,9 @@
         justify-content: space-between;
         align-items: center;
         height: 140px;
+    }
+
+    .active{
+        @include mixin.active;
     }
 </style>

@@ -61,3 +61,13 @@
     width: 90%;
     margin: 0 auto;
 }
+
+@mixin active {
+    border-bottom: 4px solid $lightblue;
+
+    a {
+        position: relative;
+        top: calc(45% + 2px);
+        color: $lightblue;
+    }
+}

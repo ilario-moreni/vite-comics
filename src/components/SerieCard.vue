@@ -3,11 +3,6 @@
         name: 'SerieCard',
         props: {
             card: Object,
-        },
-        data(){
-            return{
-                card: this.card,
-            }
         }
     }
 </script>
